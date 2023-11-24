@@ -2,6 +2,7 @@ import flet as ft
 
 
 class Tarjeta():
+    
     def build(self,  fecha, remision, m3, actividad, ubicacion, slump):
         self.cartas = ft.Card(
             content=ft.Container(
@@ -13,11 +14,7 @@ class Tarjeta():
                             subtitle=ft.Text(
                                 f"fecha: {fecha}, m3: {m3}, actividad: {actividad}, ubicacion: {ubicacion}, slump {slump}."
                             ),
-                        ),
-                        ft.Row(
-                            [ft.TextButton("Eliminar")],
-                            alignment=ft.MainAxisAlignment.END,
-                        ),
+                        )
                     ]
                 ),
                 width=400,

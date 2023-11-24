@@ -1,18 +1,20 @@
 import flet as ft
+from controller.Registro import consultar
 
-
+cursor = consultar()
 
 def Tab3():
+    data = []
+    contador = 0
+    for i in cursor:
+        x = float(i['slump'])
+        data.insert(0, ft.LineChartDataPoint(contador, x/2.5))
+        contador += 1
+        
     data_1 = [
         ft.LineChartData(
-            data_points=[
-                ft.LineChartDataPoint(0, 3.5),
-                ft.LineChartDataPoint(1, 4),
-                ft.LineChartDataPoint(2, 3),
-                ft.LineChartDataPoint(3, 5),
-                
-                
-            ],
+            data_points=data
+            ,
             stroke_width=5,
             color=ft.colors.CYAN,
             curved=True,

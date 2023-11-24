@@ -1,19 +1,29 @@
 import flet as ft
 from controls.cards import Tarjeta
-remision = 10321
-fecha = 3220
-m3 = 10
-slump = 10231
-actividad = "cualquiera"
-ubicacion = "APT - cualquiera"
+from controller.Registro import consultar
+
+
+listdata = []
+
+
 def Tab2():
-    tabla1 = Tarjeta().build(fecha, remision, m3, actividad, ubicacion, slump)
-    tabla2 = Tarjeta().build(fecha, remision, m3, actividad, ubicacion, slump)
+    cursor = consultar()
+    list = []
+    for document in cursor:
+        fecha = document['fecha']
+        remision = document['remision'] 
+        m3 = document['m3'] 
+        actividad = document['actividad'] 
+        ubicacion = document['ubicacion'] 
+        slump = document['slump']
+        #fecha, remision, m3, actividad, ubicacion, slump
+        carta = Tarjeta.build(Tarjeta,fecha, remision, m3, actividad, ubicacion, slump)
+        carta.id = remision
+        list.append(carta)
+        
+    listdata.append(remision)
+        
     
 
-    return ft.Column([
-            tabla1,
-            tabla2
-        ])
-
+    return ft.Column(list)
 

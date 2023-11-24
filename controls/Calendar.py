@@ -4,7 +4,7 @@ import datetime
 
 class calendar(ft.UserControl):
     def build(self):
-        self.fecha = ft.TextField(label="Fecha", read_only=True, value="2023-11-17")
+        self.fecha = ft.TextField(label="Fecha", read_only=True, value="YYYY-MM-DD")
         self.date_picker = ft.DatePicker(
         on_change=self.change_date,
         on_dismiss=self.date_picker_dismissed,
@@ -21,10 +21,16 @@ class calendar(ft.UserControl):
         self.fechastr = str(self.date_picker.value)
         self.fecha.value = self.fechastr[0:10]
         self.fecha.update()
+    
         
     def date_picker_dismissed(self, e):
         self.fechastr = str(self.date_picker.value)
         self.fecha.value = self.fechastr[0:10]
         self.fecha.update()
+        
+    def encontrar(self):
+        fecha = self.fecha.value
+
+        return fecha
     
     
