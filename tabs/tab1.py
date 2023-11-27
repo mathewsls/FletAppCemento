@@ -14,20 +14,20 @@ def Tab1(page: ft.Page):
 
     
      #--------------Metros cubicos m³--------------------------------------
-    metrosCubicos = ft.TextField(label="metros cubicos", keyboard_type=ft.KeyboardType.NUMBER, suffix_text="m³")
+    metrosCubicos = ft.TextField(label="Metros Cubicos", keyboard_type=ft.KeyboardType.NUMBER, suffix_text="m³")
     #--------------Metros cubicos m³--------------------------------------
     
     
     #--------------Actividades--------------------------------------
     actividades = ft.Dropdown( label="Actividades", options=[
-        ft.dropdown.Option("muros"),
-        ft.dropdown.Option("loza"),
-        ft.dropdown.Option("aticos"),
+        ft.dropdown.Option("Muros"),
+        ft.dropdown.Option("Loza"),
+        ft.dropdown.Option("Aticos"),
     ]
     )
     #--------------Actividades--------------------------------------
      #--------------ubicacion--------------------------------------
-    ubicacion = ft.TextField(label="ubicacion", keyboard_type=ft.KeyboardType.NUMBER, prefix_text="APT ")
+    ubicacion = ft.TextField(label="Ubicacion", keyboard_type=ft.KeyboardType.NUMBER, prefix_text="APT ")
         
     remision = ft.TextField(label="Remision", keyboard_type=ft.KeyboardType.NUMBER)
         #--------------Remision--------------------------------------
@@ -37,20 +37,20 @@ def Tab1(page: ft.Page):
 
         
         #--------------Metros cubicos m³--------------------------------------
-    metrosCubicos = ft.TextField(label="metros cubicos", keyboard_type=ft.KeyboardType.NUMBER, suffix_text="m³")
+    metrosCubicos = ft.TextField(label="Metros Cubicos", keyboard_type=ft.KeyboardType.NUMBER, suffix_text="m³")
         #--------------Metros cubicos m³--------------------------------------
         
         
         #--------------Actividades--------------------------------------
     actividades = ft.Dropdown( label="Actividades", options=[
-            ft.dropdown.Option("muros"),
-            ft.dropdown.Option("loza"),
-            ft.dropdown.Option("aticos"),
+            ft.dropdown.Option("Muros"),
+            ft.dropdown.Option("Loza"),
+            ft.dropdown.Option("Aticos"),
         ]
         )
         #--------------Actividades--------------------------------------
         #--------------ubicacion--------------------------------------
-    ubicacion = ft.TextField(label="ubicacion", keyboard_type=ft.KeyboardType.NUMBER, prefix_text="APT ")
+    ubicacion = ft.TextField(label="Ubicacion", keyboard_type=ft.KeyboardType.NUMBER, prefix_text="APT ")
         #--------------ubicacion--------------------------------------
     calendario = calendar()
     def cerrar(e):

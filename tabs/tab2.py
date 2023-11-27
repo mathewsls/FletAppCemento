@@ -25,5 +25,5 @@ def Tab2():
         
     
 
-    return ft.Column(list)
+    return ft.Row(list)
 

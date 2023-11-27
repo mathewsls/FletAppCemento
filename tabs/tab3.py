@@ -8,7 +8,7 @@ def Tab3():
     contador = 0
     for i in cursor:
         x = float(i['slump'])
-        data.insert(0, ft.LineChartDataPoint(contador, x/2.5))
+        data.insert(0, ft.LineChartDataPoint(contador, x-4))
         contador += 1
         
     data_1 = [
@@ -19,6 +19,7 @@ def Tab3():
             color=ft.colors.CYAN,
             curved=True,
             stroke_cap_round=True,
+            
         )
     ]
 
@@ -39,12 +40,17 @@ def Tab3():
                 ),
                 ft.ChartAxisLabel(
                     value=3,
-                    label=ft.Text("7.5", size=14, weight=ft.FontWeight.BOLD),
+                    label=ft.Text("7.0", size=14, weight=ft.FontWeight.BOLD),
                 ),
                 ft.ChartAxisLabel(
                     value=5,
                     label=ft.Text("9.0", size=14, weight=ft.FontWeight.BOLD),
                 ),
+                ft.ChartAxisLabel(
+                    value=6,
+                    label=ft.Text("y", size=20, weight=ft.FontWeight.BOLD),
+                ),
+               
             ],
             labels_size=40,
         ),
@@ -63,7 +69,7 @@ def Tab3():
                     ),
                 ),
                 ft.ChartAxisLabel(
-                    value=5,
+                    value=15,
                     label=ft.Container(
                         ft.Text(
                             "15",
@@ -75,7 +81,7 @@ def Tab3():
                     ),
                 ),
                 ft.ChartAxisLabel(
-                    value=11,
+                    value=30,
                     label=ft.Container(
                         ft.Text(
                             "30",
@@ -86,6 +92,7 @@ def Tab3():
                         margin=ft.margin.only(top=10),
                     ),
                 ),
+                
             ],
             labels_size=32,
         ),
@@ -93,7 +100,7 @@ def Tab3():
         min_y=0,
         max_y=6,
         min_x=0,
-        max_x=11,
+        max_x=30,
         # animate=5000,
         expand=True,
     )

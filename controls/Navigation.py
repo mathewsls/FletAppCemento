@@ -33,11 +33,13 @@ def Drawer(page: ft.Page):
             remisionborrar = ft.TextField(hint_text="Ingrese el numero de remision para borrar")
 
             borrador = ft.ElevatedButton(text="Borrar", icon=ft.icons.DELETE, on_click=quitar)
-            page.add(tab2, remisionborrar,borrador)
+            
+            page.add(ft.Column(controls= [tab2, remisionborrar,borrador], scroll=ft.ScrollMode.ALWAYS))
             page.update() 
         elif e.control.selected_index == 2:
             tab3 = Tab3()
-            page.add(tab3)
+
+            page.add(tab3, ft.ElevatedButton(text="Eje Y = Slump, Eje X = tiempo(en dias)", icon=ft.icons.INFO))
             page.update()
 
     page.title = "AppBeta"
